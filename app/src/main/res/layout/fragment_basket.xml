@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:text="@string/cart_is_empty"
+        android:id="@+id/tvBasketNull"
+        android:visibility="gone"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lvBasket"
+        android:layout_above="@+id/btnOrder"
+        />
+
+    <com.cengalabs.flatui.views.FlatButton
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        flatui:fl_touchEffect="fl_ripple"
+        flatui:fl_blockButtonEffectHeight="3dp"
+        android:text="@string/orderComplete"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:id="@+id/btnOrder"
+        flatui:fl_theme="@array/btnOrderTheme"
+        />
+
+</RelativeLayout>
